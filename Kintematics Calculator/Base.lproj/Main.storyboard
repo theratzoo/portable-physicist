@@ -1,24 +1,1368 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uLV-ti-7LE">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Show Equation View Controller-->
+        <scene sceneID="HDy-AM-bO3">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="Zrk-Da-8cw" customClass="ShowEquationViewController" customModule="Kintematics_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a5f-Y9-xaE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WtL-C4-Nvt">
+                                <rect key="frame" x="40" y="97" width="240" height="220"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="61C-4U-BVf">
+                                <rect key="frame" x="15" y="18" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="return_arrow.png"/>
+                                <connections>
+                                    <segue destination="9Et-y9-SJG" kind="show" identifier="options" id="Z0a-vR-YyO"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KfV-7w-0wJ">
+                                <rect key="frame" x="0.0" y="378" width="320" height="190"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GS8-KA-BGi">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="190"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.29271143630000002" green="0.71488718900000003" blue="0.92925126899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BwP-U5-juk" customClass="MenuButton" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="89" y="495" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select equation..."/>
+                                <connections>
+                                    <action selector="showPickerView:" destination="Zrk-Da-8cw" eventType="touchUpInside" id="i8R-Cd-wrb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Equations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="shg-xB-9gX" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="89" y="20" width="142" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.29803921570000003" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="32"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.57310872219999998" blue="0.84521732230000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="SV8-Ul-Rp3"/>
                     </view>
+                    <connections>
+                        <outlet property="imageViewA" destination="WtL-C4-Nvt" id="Gt4-gJ-VPW"/>
+                        <outlet property="listOfEqsPickerView" destination="GS8-KA-BGi" id="tBi-gO-6Pc"/>
+                        <outlet property="listOfEqsView" destination="KfV-7w-0wJ" id="Zyl-JX-MXH"/>
+                        <outlet property="returnBtn" destination="61C-4U-BVf" id="Vwq-J7-Elq"/>
+                        <outlet property="selectEqsBtn" destination="BwP-U5-juk" id="B6A-Sm-Ra2"/>
+                        <outlet property="titleLabel" destination="shg-xB-9gX" id="7st-2i-8fH"/>
+                        <segue destination="slO-OT-Jyi" kind="show" identifier="settings" id="ef9-jj-0Ql"/>
+                        <segue destination="jsZ-VC-gPy" kind="show" identifier="show work" customClass="SegueFromLeft" customModule="Kintematics_Calculator" customModuleProvider="target" id="S5i-0l-zjF"/>
+                        <segue destination="kJZ-Js-eQW" kind="show" identifier="unit converter" customClass="SegueFromRight" customModule="Kintematics_Calculator" customModuleProvider="target" id="sw9-j2-ecU"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o02-Z9-htI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1331.25" y="-551.4084507042254"/>
+        </scene>
+        <!--Options View Controller-->
+        <scene sceneID="kbj-Kl-bGH">
+            <objects>
+                <viewController id="9Et-y9-SJG" customClass="OptionsViewController" customModule="Kintematics_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LFZ-6H-uPt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCs-td-YhY">
+                                <rect key="frame" x="15" y="18" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <state key="normal" backgroundImage="return_arrow.png">
+                                    <color key="titleColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitOptionScreen:" destination="9Et-y9-SJG" eventType="touchUpInside" id="gFC-0Z-JAy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ADU-I9-1wY">
+                                <rect key="frame" x="59" y="380" width="200" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <state key="normal" backgroundImage="button_practice-problems.gif">
+                                    <color key="titleColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hBk-Ch-Z2c" kind="presentation" identifier="practice" customClass="SegueFromLeft" customModule="Kintematics_Calculator" customModuleProvider="target" id="kFn-Oa-NRb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uc2-q6-5Ks">
+                                <rect key="frame" x="59" y="440" width="200" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <state key="normal" backgroundImage="button_quiz.gif">
+                                    <color key="titleColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="KFw-es-DHg" kind="show" identifier="quiz start" customClass="SegueFromRight" customModule="Kintematics_Calculator" customModuleProvider="target" id="3K0-GS-AqF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Additional Tools" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="GkA-Lf-fJ1" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="64" y="55" width="192" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.29803921570000003" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4jR-9X-b84">
+                                <rect key="frame" x="59" y="320" width="200" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <state key="normal" backgroundImage="button_unit-converter.gif">
+                                    <color key="titleColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="kJZ-Js-eQW" kind="presentation" identifier="unit converter" customClass="SegueFromRight" customModule="Kintematics_Calculator" customModuleProvider="target" id="Px8-Ud-TxD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTj-b1-3td">
+                                <rect key="frame" x="59" y="260" width="200" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <state key="normal" backgroundImage="button_show-equation.gif">
+                                    <color key="titleColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Zrk-Da-8cw" kind="show" identifier="show equation" customClass="SegueFromRight" customModule="Kintematics_Calculator" customModuleProvider="target" id="qZA-1s-3Ue"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M60-X8-BYT">
+                                <rect key="frame" x="60" y="200" width="200" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <state key="normal" backgroundImage="button_show-work.gif">
+                                    <color key="titleColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="disabled" backgroundImage="button_show-work_disable.gif"/>
+                                <connections>
+                                    <segue destination="jsZ-VC-gPy" kind="show" identifier="show work" customClass="SegueFromRight" customModule="Kintematics_Calculator" customModuleProvider="target" id="h4U-Zx-cK3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yh9-hY-ku1">
+                                <rect key="frame" x="60" y="140" width="200" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="18"/>
+                                <state key="normal" backgroundImage="button_other-calculators.gif">
+                                    <color key="titleColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uLV-ti-7LE" kind="presentation" customClass="SegueFromLeft" customModule="Kintematics_Calculator" customModuleProvider="target" id="IWL-bX-N8S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.57310872219999998" blue="0.84521732230000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="WoW-25-ud6"/>
+                    </view>
+                    <connections>
+                        <outlet property="additionalToolsLabel" destination="GkA-Lf-fJ1" id="N3E-gm-ad4"/>
+                        <outlet property="otherCalculatorsBtn" destination="Yh9-hY-ku1" id="wEz-KP-p0z"/>
+                        <outlet property="practiceProblemsBtn" destination="ADU-I9-1wY" id="ehX-2b-c0u"/>
+                        <outlet property="quizBtn" destination="uc2-q6-5Ks" id="whj-C7-QSa"/>
+                        <outlet property="returnBtn" destination="mCs-td-YhY" id="F9l-hV-Qqv"/>
+                        <outlet property="showEquationBtn" destination="ZTj-b1-3td" id="aox-AW-xhN"/>
+                        <outlet property="showWorkBtn" destination="M60-X8-BYT" id="e7A-nO-dUC"/>
+                        <outlet property="unitConverterBtn" destination="4jR-9X-b84" id="9lU-NB-mC4"/>
+                        <segue destination="wHc-jq-L8T" kind="show" identifier="calculator" id="qQZ-fM-tBC"/>
+                        <segue destination="slO-OT-Jyi" kind="show" identifier="settings" id="T5e-T4-QIO"/>
+                        <segue destination="wHc-jq-L8T" kind="show" identifier="prev" customClass="SegueFromLeft" customModule="Kintematics_Calculator" customModuleProvider="target" id="DLh-pe-rcZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4o-Ap-X17" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.875" y="130.98591549295776"/>
+        </scene>
+        <!--Show Work View Controller-->
+        <scene sceneID="ZLd-74-8r7">
+            <objects>
+                <viewController id="jsZ-VC-gPy" customClass="ShowWorkViewController" customModule="Kintematics_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TKc-FG-Gzd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VUu-Fa-KGU">
+                                <rect key="frame" x="10" y="18" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="return_arrow.png"/>
+                                <connections>
+                                    <action selector="leaveShowWork:" destination="jsZ-VC-gPy" eventType="touchUpInside" id="g7N-T0-xbS"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oeS-89-k8X">
+                                <rect key="frame" x="30" y="80" width="260" height="326"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.29271143630000002" green="0.71488718900000003" blue="0.92925126899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LZx-3d-2sn">
+                                <rect key="frame" x="40" y="278" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show Work" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ftc-uB-EcO" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="104" y="25" width="111" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.29803921570000003" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WBC-4d-Ds6">
+                                <rect key="frame" x="0.0" y="475" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kXE-z9-055" customClass="MenuButton" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="40" y="414" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select saved problem..."/>
+                                <connections>
+                                    <action selector="showBottomView:" destination="jsZ-VC-gPy" eventType="touchUpInside" id="bwv-Z1-HEm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.57310872219999998" blue="0.84521732230000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="6b8-xp-UKn"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="LZx-3d-2sn" id="QHO-5H-HuT"/>
+                        <outlet property="returnBtn" destination="VUu-Fa-KGU" id="QLh-xk-jIa"/>
+                        <outlet property="selectSaveProblemBtn" destination="kXE-z9-055" id="NoW-5E-wW6"/>
+                        <outlet property="showWorkNavBar" destination="WBC-4d-Ds6" id="PvE-p6-hhE"/>
+                        <outlet property="showWorkTextView" destination="oeS-89-k8X" id="WD7-kP-zNc"/>
+                        <outlet property="titleLabel" destination="ftc-uB-EcO" id="S17-xx-wyb"/>
+                        <segue destination="Zrk-Da-8cw" kind="show" identifier="show equation" customClass="SegueFromRight" customModule="Kintematics_Calculator" customModuleProvider="target" id="pvf-Bc-hEb"/>
+                        <segue destination="slO-OT-Jyi" kind="show" identifier="settings" animates="NO" id="QVR-S4-uph"/>
+                        <segue destination="9Et-y9-SJG" kind="show" identifier="prev" customClass="SegueFromLeft" customModule="Kintematics_Calculator" customModuleProvider="target" id="VvS-kG-1tM"/>
+                        <segue destination="YOM-fZ-uKE" kind="show" identifier="quizoverview" id="EzQ-lM-UE9"/>
+                        <segue destination="9Et-y9-SJG" kind="show" identifier="options" id="3Gf-7y-9Ab"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cll-jP-HzA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1848.75" y="132.04225352112675"/>
+        </scene>
+        <!--Unit Converter View Controller-->
+        <scene sceneID="jSc-JU-qgh">
+            <objects>
+                <viewController title="Unit Converter View Controller" id="kJZ-Js-eQW" customClass="UnitConverterViewController" customModule="Kintematics_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gPg-Ko-G1S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Kaf-En-cFe">
+                                <rect key="frame" x="20" y="70" width="280" height="430"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.65499269044603092" blue="0.91437975884822342" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V60-5x-Wcl">
+                                <rect key="frame" x="15" y="18" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="return_arrow.png"/>
+                                <connections>
+                                    <action selector="returnToEquationButton:" destination="kJZ-Js-eQW" eventType="touchUpInside" id="8EG-fN-mEi"/>
+                                    <segue destination="9Et-y9-SJG" kind="show" id="hhZ-xN-SGI"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="gUK-cw-ePx">
+                                <rect key="frame" x="20" y="360" width="280" height="100"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.43460821849999998" blue="0.53436310279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="45"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wJh-9Z-XSM">
+                                <rect key="frame" x="100" y="310" width="120" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="button_convert.gif"/>
+                                <state key="disabled" backgroundImage="button_convert_disabled.gif"/>
+                                <connections>
+                                    <action selector="convertButtonAction:" destination="kJZ-Js-eQW" eventType="touchUpInside" id="DmB-aD-Z9V"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Unit Converter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="AWO-QU-hhv" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="60" y="26" width="200" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.29803921570000003" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="46"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2uO-Ys-FP3">
+                                <rect key="frame" x="274" y="18" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="gear.png"/>
+                                <connections>
+                                    <segue destination="slO-OT-Jyi" kind="show" identifier="settings" id="GmD-mY-3F5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQ4-a5-42k" customClass="MenuButton" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="40" y="92" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select Var..."/>
+                                <connections>
+                                    <action selector="showSelectVarPicker:" destination="kJZ-Js-eQW" eventType="touchUpInside" id="xru-BF-2Pp"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Number Value" textAlignment="natural" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Mjb-nR-W6z" customClass="PaddingTextField" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="40" y="144" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="valueToConvertEditingEnd:" destination="kJZ-Js-eQW" eventType="editingDidEnd" id="kU3-sM-QHH"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4QK-oI-SLi" customClass="MenuButton" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="40" y="261" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select new unit..."/>
+                                <connections>
+                                    <action selector="showSelectToUnitPicker:" destination="kJZ-Js-eQW" eventType="touchUpInside" id="OvW-WF-tud"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xpy-Oa-j2d" customClass="MenuButton" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="40" y="203" width="240" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select original unit..."/>
+                                <connections>
+                                    <action selector="showSelectUnitPicker:" destination="kJZ-Js-eQW" eventType="touchUpInside" id="piO-Bu-fkP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxZ-kX-Hbv">
+                                <rect key="frame" x="60" y="480" width="200" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" backgroundImage="button_show-past-conversions.gif"/>
+                                <connections>
+                                    <action selector="showPastConversionAction:" destination="kJZ-Js-eQW" eventType="touchUpInside" id="PpA-8f-QoT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.57310872219999998" blue="0.84521732230000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="JTv-oV-UdH"/>
+                    </view>
+                    <connections>
+                        <outlet property="convertBtn" destination="wJh-9Z-XSM" id="K5n-17-o1e"/>
+                        <outlet property="correctSelectUnitBtn" destination="Xpy-Oa-j2d" id="WMJ-cq-pqz"/>
+                        <outlet property="enterValueTextField" destination="Mjb-nR-W6z" id="UTQ-b1-xpn"/>
+                        <outlet property="pastConversionBtn" destination="NxZ-kX-Hbv" id="2Aj-zZ-47r"/>
+                        <outlet property="pastConversionView" destination="Kaf-En-cFe" id="UuD-Jo-OZw"/>
+                        <outlet property="resultLabel" destination="gUK-cw-ePx" id="Acm-c3-xhP"/>
+                        <outlet property="returnBtn" destination="V60-5x-Wcl" id="SnH-IE-gE8"/>
+                        <outlet property="selectUnitsToConvertToBtn" destination="4QK-oI-SLi" id="yfI-cA-2Tn"/>
+                        <outlet property="selectVarBtn" destination="DQ4-a5-42k" id="w19-hW-myj"/>
+                        <outlet property="settingsBtn" destination="2uO-Ys-FP3" id="QvK-LH-eU9"/>
+                        <outlet property="titleLabel" destination="AWO-QU-hhv" id="VOO-Fp-p7u"/>
+                        <segue destination="Zrk-Da-8cw" kind="show" identifier="show equation" customClass="SegueFromLeft" customModule="Kintematics_Calculator" customModuleProvider="target" id="fzn-bu-iNN"/>
+                        <segue destination="hBk-Ch-Z2c" kind="show" identifier="practice problems" customClass="SegueFromRight" customModule="Kintematics_Calculator" customModuleProvider="target" id="Hzq-SZ-8gm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pe1-VK-LT5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-80.625" y="-664.43661971830988"/>
+        </scene>
+        <!--Calculator View Controller-->
+        <scene sceneID="9zH-8a-I7R">
+            <objects>
+                <viewController id="wHc-jq-L8T" customClass="CalculatorViewController" customModule="Kintematics_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VTk-TQ-tAY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Answer" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="2AD-m2-j8T">
+                                <rect key="frame" x="25" y="400" width="271" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="60"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="X Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="DKO-FZ-5qW" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="54" y="20" width="217" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.29803921568627451" blue="0.45490196078431372" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="61"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="35"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1T-7q-Axz">
+                                <rect key="frame" x="280" y="28" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="gear.png"/>
+                                <connections>
+                                    <segue destination="slO-OT-Jyi" kind="show" identifier="settings" id="Auw-Gx-TFI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikO-SS-Ofy">
+                                <rect key="frame" x="10" y="28" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_more.gif">
+                                    <color key="titleColor" red="0.0" green="0.43529411764705883" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="9Et-y9-SJG" kind="show" identifier="options" id="Hju-kE-VWa"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBZ-B3-KKM">
+                                <rect key="frame" x="10" y="75" width="300" height="316"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Var 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="jcX-IJ-hyi">
+                                        <rect key="frame" x="5" y="21" width="150" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Var 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="XLI-5I-fLf">
+                                        <rect key="frame" x="5" y="75" width="150" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Var 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6pR-jV-Yqr">
+                                        <rect key="frame" x="5" y="133" width="150" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Var 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Hdb-MK-6kU">
+                                        <rect key="frame" x="5" y="193" width="150" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Var 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="K02-8g-oKQ">
+                                        <rect key="frame" x="5" y="244" width="150" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="0M0-9N-J0b" customClass="PaddingTextField" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="160" y="82" width="90" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="35"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="var2TFBeginEditing:" destination="wHc-jq-L8T" eventType="editingDidBegin" id="z19-W5-z19"/>
+                                            <action selector="var2TFEndEditing:" destination="wHc-jq-L8T" eventType="editingDidEnd" id="XOE-XI-2Vb"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="BAQ-tW-6pa" customClass="PaddingTextField" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="160" y="140" width="90" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="35"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="var3TFBeginEditing:" destination="wHc-jq-L8T" eventType="editingDidBegin" id="Ds0-Pq-0G3"/>
+                                            <action selector="var3TFEndEditing:" destination="wHc-jq-L8T" eventType="editingDidEnd" id="8no-kM-TlS"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="ug8-n9-osg" customClass="PaddingTextField" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="160" y="200" width="90" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="35"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="var4TFBeginEditing:" destination="wHc-jq-L8T" eventType="editingDidBegin" id="g0f-is-SJh"/>
+                                            <action selector="var4TFEndEditing:" destination="wHc-jq-L8T" eventType="editingDidEnd" id="f37-17-Cex"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="4jd-1o-pCY" customClass="PaddingTextField" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="160" y="251" width="90" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="35"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="var5TFBeginEditing:" destination="wHc-jq-L8T" eventType="editingDidBegin" id="Kon-9V-iqj"/>
+                                            <action selector="var5TFEndEditing:" destination="wHc-jq-L8T" eventType="editingDidEnd" id="Sri-WB-LO3"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" minimumFontSize="23" translatesAutoresizingMaskIntoConstraints="NO" id="JuD-lB-0A4" customClass="PaddingTextField" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="160" y="28" width="90" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="35"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="var1TFBeginEditing:" destination="wHc-jq-L8T" eventType="editingDidBegin" id="peD-5s-htW"/>
+                                            <action selector="var1TFEndEditing:" destination="wHc-jq-L8T" eventType="editingDidEnd" id="Atj-cq-FJd"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.4346082184639059" blue="0.53436310279187815" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r7b-h6-dVQ">
+                                <rect key="frame" x="207" y="490" width="60" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_save-problem.gif">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled" backgroundImage="button_save-problem-disabled.gif"/>
+                                <connections>
+                                    <action selector="saveTheQuestion:" destination="wHc-jq-L8T" eventType="touchUpInside" id="c2g-KZ-yhG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bft-N4-k3L" customClass="CustomButton" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="54" y="488" width="120" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" backgroundImage="button_calculate.gif">
+                                    <color key="titleColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="disabled" backgroundImage="button_calculate _disabled.gif"/>
+                                <state key="selected" backgroundImage="button_calculate _highlighted.gif"/>
+                                <state key="highlighted" backgroundImage="button_calculate _highlighted.gif"/>
+                                <connections>
+                                    <action selector="calculate:" destination="wHc-jq-L8T" eventType="touchUpInside" id="j2z-RF-Fhb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.57310872221202647" blue="0.84521732233502544" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="a86-I3-Xl4"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="2AD-m2-j8T" id="qzi-KV-rfM"/>
+                        <outlet property="calculateBtn" destination="Bft-N4-k3L" id="D1S-uy-Y28"/>
+                        <outlet property="calculatorTitleLabel" destination="DKO-FZ-5qW" id="9Ar-gM-sE7"/>
+                        <outlet property="moreBtn" destination="ikO-SS-Ofy" id="oyJ-7V-hpY"/>
+                        <outlet property="saveQuestionBtn" destination="r7b-h6-dVQ" id="EaX-ES-GRo"/>
+                        <outlet property="settingsBtn" destination="H1T-7q-Axz" id="qsp-HU-s7G"/>
+                        <outlet property="varFiveLabel" destination="K02-8g-oKQ" id="CfS-3W-nwi"/>
+                        <outlet property="varFiveTextField" destination="4jd-1o-pCY" id="8Dt-LT-trN"/>
+                        <outlet property="varFourLabel" destination="Hdb-MK-6kU" id="4Vb-n6-QAy"/>
+                        <outlet property="varFourTextField" destination="ug8-n9-osg" id="cpN-t6-9s0"/>
+                        <outlet property="varOneLabel" destination="jcX-IJ-hyi" id="efB-jJ-Ti3"/>
+                        <outlet property="varOneTextField" destination="JuD-lB-0A4" id="3Sf-F9-hOW"/>
+                        <outlet property="varThreeLabel" destination="6pR-jV-Yqr" id="VXc-da-67X"/>
+                        <outlet property="varThreeTextField" destination="BAQ-tW-6pa" id="k6z-4B-HHa"/>
+                        <outlet property="varTwoLabel" destination="XLI-5I-fLf" id="kgK-6s-jCX"/>
+                        <outlet property="varTwoTextField" destination="0M0-9N-J0b" id="ycL-QM-ZgN"/>
+                        <outlet property="varView" destination="zBZ-B3-KKM" id="21U-5d-d9N"/>
+                        <segue destination="uLV-ti-7LE" kind="show" identifier="home" customClass="SegueFromLeft" customModule="Kintematics_Calculator" customModuleProvider="target" id="u9l-gp-rPG"/>
+                        <segue destination="9Et-y9-SJG" kind="show" identifier="next" customClass="SegueFromRight" customModule="Kintematics_Calculator" customModuleProvider="target" id="HHa-xj-7fy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AIv-4p-LgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1352" y="-742"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="tph-TL-ELd">
+            <objects>
+                <viewController id="slO-OT-Jyi" customClass="SettingsViewController" customModule="Kintematics_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3VV-NL-h1q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yTu-eT-w6N">
+                                <rect key="frame" x="48" y="34" width="225" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <segments>
+                                    <segment title="Specific Settings"/>
+                                    <segment title="General Settings"/>
+                                </segments>
+                                <color key="tintColor" red="0.1058823529" green="0.29411764709999999" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentTabChanged:" destination="slO-OT-Jyi" eventType="valueChanged" id="Lpk-79-xWY"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ucq-d4-7bO">
+                                <rect key="frame" x="20" y="80" width="280" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.43460821849999998" blue="0.53436310279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N0a-dj-cVA">
+                                <rect key="frame" x="20" y="170" width="280" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.43460821849999998" blue="0.53436310279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="49f-p0-ak9">
+                                <rect key="frame" x="20" y="260" width="280" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.43460821849999998" blue="0.53436310279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Uu-Xi-rq7">
+                                <rect key="frame" x="20" y="350" width="280" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.43460821849999998" blue="0.53436310279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3CM-fY-hDP">
+                                <rect key="frame" x="5" y="18" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="return_arrow.png"/>
+                                <connections>
+                                    <action selector="leaveSettings:" destination="slO-OT-Jyi" eventType="touchUpInside" id="jGl-R8-HKF"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="3YO-Qo-OK9" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="43" y="34" width="235" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.29803921570000003" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oJf-Cm-8d8">
+                                <rect key="frame" x="100" y="486" width="120" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_save.gif"/>
+                                <connections>
+                                    <action selector="saveSettings:" destination="slO-OT-Jyi" eventType="touchUpInside" id="c1h-Y4-AoD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCV-hr-uaX">
+                                <rect key="frame" x="115" y="435" width="90" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_help_1.gif"/>
+                                <connections>
+                                    <action selector="pressHelpBtn:" destination="slO-OT-Jyi" eventType="touchUpInside" id="jMZ-nG-ghA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.57310872219999998" blue="0.84521732230000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="TA3-Nx-jfk"/>
+                    </view>
+                    <connections>
+                        <outlet property="helpBtn" destination="iCV-hr-uaX" id="2QY-Lp-BAj"/>
+                        <outlet property="returnBtn" destination="3CM-fY-hDP" id="8p2-u7-Shy"/>
+                        <outlet property="saveBtn" destination="oJf-Cm-8d8" id="rGW-lh-nZA"/>
+                        <outlet property="segmentControl" destination="yTu-eT-w6N" id="aRw-Pl-1J3"/>
+                        <outlet property="titleLabel" destination="3YO-Qo-OK9" id="dS7-k4-8Sq"/>
+                        <outlet property="view1" destination="Ucq-d4-7bO" id="lfA-9c-Zk6"/>
+                        <outlet property="view2" destination="N0a-dj-cVA" id="oxE-fz-OIz"/>
+                        <outlet property="view3" destination="49f-p0-ak9" id="ROc-qP-lUM"/>
+                        <outlet property="view4" destination="1Uu-Xi-rq7" id="U3h-ON-7xh"/>
+                        <segue destination="uLV-ti-7LE" kind="show" identifier="home" id="vIB-kr-mmJ"/>
+                        <segue destination="wHc-jq-L8T" kind="show" identifier="calculator" id="yXB-Wv-SCx"/>
+                        <segue destination="hBk-Ch-Z2c" kind="show" identifier="practiceproblems" id="MYZ-N8-302"/>
+                        <segue destination="kJZ-Js-eQW" kind="show" identifier="unitconverter" id="ajC-R0-JBu"/>
+                        <segue destination="uLV-ti-7LE" kind="custom" identifier="next" customClass="SegueFromRight" customModule="Kintematics_Calculator" customModuleProvider="target" id="5xL-9B-lRZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GL1-gX-Miz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1489" y="993"/>
+        </scene>
+        <!--Practice Problems View Controller-->
+        <scene sceneID="eqg-YJ-znE">
+            <objects>
+                <viewController id="hBk-Ch-Z2c" customClass="PracticeProblemsViewController" customModule="Kintematics_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fX7-jh-M4f">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Answer..." textAlignment="natural" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="VJr-h5-gqz" customClass="PaddingTextField" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="16" y="390" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="30"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5I-x8-qW4">
+                                <rect key="frame" x="110" y="480" width="100" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" backgroundImage="button_check.gif"/>
+                                <state key="disabled" backgroundImage="button_check_disabled.gif"/>
+                                <connections>
+                                    <action selector="checkAnswerBtnAction:" destination="hBk-Ch-Z2c" eventType="touchUpInside" id="8Cn-c2-bmz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DI9-pI-vut">
+                                <rect key="frame" x="16" y="496" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_hint.gif"/>
+                                <state key="disabled" backgroundImage="button_hint_disabled.gif"/>
+                                <connections>
+                                    <action selector="getHintBtnAction:" destination="hBk-Ch-Z2c" eventType="touchUpInside" id="eYe-rJ-8J8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMx-1s-Rmi">
+                                <rect key="frame" x="16" y="20" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" backgroundImage="button_more.gif"/>
+                                <connections>
+                                    <segue destination="9Et-y9-SJG" kind="presentation" identifier="options" id="LhF-BO-WPq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Practice Problems- Gravitational Force" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="5iK-Rq-snk" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="70" y="27" width="180" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1058823529" green="0.29411764709999999" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kov-Qw-DLW">
+                                <rect key="frame" x="35" y="335" width="250" height="140"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5z-01-4IL">
+                                <rect key="frame" x="274" y="20" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="gear.png"/>
+                                <connections>
+                                    <segue destination="slO-OT-Jyi" kind="show" identifier="settings" id="ARG-8B-EJG"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g6i-t8-NlJ">
+                                <rect key="frame" x="15" y="90" width="290" height="230"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.29271143630466662" green="0.71488718903178938" blue="0.9292512690005077" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odp-8q-ROW" customClass="MenuButton" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="140" y="390" width="158" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select Unit..."/>
+                                <connections>
+                                    <action selector="showBottomView:" destination="hBk-Ch-Z2c" eventType="touchUpInside" id="L5v-8y-sQZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O4f-UP-BOS">
+                                <rect key="frame" x="130" y="508" width="60" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_save-problem.gif"/>
+                                <state key="disabled" backgroundImage="button_save-problem-disabled.gif"/>
+                                <connections>
+                                    <action selector="saveProblem:" destination="hBk-Ch-Z2c" eventType="touchUpInside" id="D3B-W2-PK4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTW-we-V9S">
+                                <rect key="frame" x="274" y="496" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="right_arrow.png"/>
+                                <connections>
+                                    <action selector="nextProblemBtnAction:" destination="hBk-Ch-Z2c" eventType="touchUpInside" id="bBj-dh-Rfb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.57310872219999998" blue="0.84521732230000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="Jnn-tF-NYC"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerTextField" destination="VJr-h5-gqz" id="EXC-lD-s9C"/>
+                        <outlet property="arrowBtn" destination="BTW-we-V9S" id="3Qg-Mb-18T"/>
+                        <outlet property="checkAnswerBtn" destination="d5I-x8-qW4" id="xWQ-vu-qGH"/>
+                        <outlet property="hintBtn" destination="DI9-pI-vut" id="IDi-A2-dTP"/>
+                        <outlet property="mcview" destination="Kov-Qw-DLW" id="hjE-yh-Idr"/>
+                        <outlet property="moreBtn" destination="MMx-1s-Rmi" id="W1R-pR-PB0"/>
+                        <outlet property="problemTextView" destination="g6i-t8-NlJ" id="sfL-TV-b90"/>
+                        <outlet property="saveProblemBtn" destination="O4f-UP-BOS" id="FEH-tg-N2S"/>
+                        <outlet property="selectUnitBtn" destination="odp-8q-ROW" id="ldG-CO-rWj"/>
+                        <outlet property="settingsBtn" destination="i5z-01-4IL" id="JNe-4V-Vt2"/>
+                        <outlet property="titleLabel" destination="5iK-Rq-snk" id="AEK-M5-tOK"/>
+                        <segue destination="kJZ-Js-eQW" kind="show" identifier="unit converter" customClass="SegueFromLeft" customModule="Kintematics_Calculator" customModuleProvider="target" id="Gb3-Ry-p55"/>
+                        <segue destination="KFw-es-DHg" kind="show" identifier="quiz setup" customClass="SegueFromRight" customModule="Kintematics_Calculator" customModuleProvider="target" id="uKm-pQ-YbT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="juI-zy-hMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-78.75" y="923.23943661971828"/>
+        </scene>
+        <!--Quiz View Controller-->
+        <scene sceneID="jox-jH-Ydk">
+            <objects>
+                <viewController id="Z2f-YV-n6H" customClass="QuizViewController" customModule="Kintematics_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lvV-0X-i6I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LNi-HA-aEB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="4cN-KF-Ni8">
+                                        <rect key="frame" x="40" y="125" width="240" height="205"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.29271143630000002" green="0.71488718900000003" blue="0.92925126899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="J1Q-BI-OBf" customClass="PaddingTextField" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="22" y="393" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="answerTFEndEditing:" destination="Z2f-YV-n6H" eventType="editingDidEnd" id="yS6-5P-23f"/>
+                                        </connections>
+                                    </textField>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NC9-jV-Zhe">
+                                        <rect key="frame" x="35" y="338" width="250" height="140"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7i-8G-KAV">
+                                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="button_a.gif"/>
+                                                <state key="disabled" backgroundImage="button_a_disabled.gif"/>
+                                                <connections>
+                                                    <action selector="buttonAAction:" destination="Z2f-YV-n6H" eventType="touchUpInside" id="ig0-th-qDa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eKH-F4-0Lj">
+                                                <rect key="frame" x="0.0" y="35" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="button_b.gif"/>
+                                                <state key="disabled" backgroundImage="button_b_disabled.gif"/>
+                                                <connections>
+                                                    <action selector="buttonBAction:" destination="Z2f-YV-n6H" eventType="touchUpInside" id="ebX-SU-9WC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qto-M8-6ZA">
+                                                <rect key="frame" x="0.0" y="70" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="button_c.gif"/>
+                                                <state key="disabled" backgroundImage="button_c_disabled.gif"/>
+                                                <connections>
+                                                    <action selector="buttonCAction:" destination="Z2f-YV-n6H" eventType="touchUpInside" id="d7q-eT-I77"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GqF-fe-IB5">
+                                                <rect key="frame" x="0.0" y="105" width="30" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" backgroundImage="button_d.gif"/>
+                                                <state key="disabled" backgroundImage="button_d_disabled.gif"/>
+                                                <connections>
+                                                    <action selector="buttonDAction:" destination="Z2f-YV-n6H" eventType="touchUpInside" id="Qmg-Qk-XTu"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etw-eC-EuO">
+                                        <rect key="frame" x="16" y="18" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="button_exit.gif"/>
+                                        <connections>
+                                            <action selector="exitBtnAction:" destination="Z2f-YV-n6H" eventType="touchUpInside" id="sdB-mC-6wa"/>
+                                            <segue destination="9Et-y9-SJG" kind="show" identifier="options" id="ygM-Uv-hl5"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Lxa-fI-fwR" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="16" width="203" height="53"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.29803921570000003" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="45"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRk-bQ-uT2">
+                                        <rect key="frame" x="274" y="18" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="right_arrow.png"/>
+                                        <connections>
+                                            <action selector="nextButtonAction:" destination="Z2f-YV-n6H" eventType="touchUpInside" id="exA-P8-zGg"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Problem:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="KyP-3f-7WN" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="52" y="60" width="203" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.0" green="0.29803921570000003" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="45"/>
+                                        <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGC-H9-Hnx">
+                                        <rect key="frame" x="35" y="486" width="140" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="button_submit-answer.gif">
+                                            <color key="titleColor" red="0.10588235294117647" green="0.29411764705882354" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <state key="disabled" backgroundImage="button_submit-answer_disabled.gif"/>
+                                        <connections>
+                                            <action selector="submitAnswerBtnAction:" destination="Z2f-YV-n6H" eventType="touchUpInside" id="58s-h7-wSD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01o-XI-LuM">
+                                        <rect key="frame" x="221" y="491" width="60" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="button_save-problem.gif"/>
+                                        <state key="disabled" backgroundImage="button_save-problem-disabled.gif"/>
+                                        <connections>
+                                            <action selector="saveProblemButtonPressed:" destination="Z2f-YV-n6H" eventType="touchUpInside" id="2un-hX-276"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.57310872219999998" blue="0.84521732230000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rG0-tP-87a"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerTextField" destination="J1Q-BI-OBf" id="g0x-7t-U0h"/>
+                        <outlet property="buttonA" destination="F7i-8G-KAV" id="pfQ-vK-L29"/>
+                        <outlet property="buttonB" destination="eKH-F4-0Lj" id="rGR-Fb-ia5"/>
+                        <outlet property="buttonC" destination="qto-M8-6ZA" id="ubx-QV-bSD"/>
+                        <outlet property="buttonD" destination="GqF-fe-IB5" id="O0c-5e-gvU"/>
+                        <outlet property="currentProblemLabel" destination="KyP-3f-7WN" id="q0B-QF-9u4"/>
+                        <outlet property="currentQuizScoreTitle" destination="Lxa-fI-fwR" id="cm6-6L-eRd"/>
+                        <outlet property="exitBtn" destination="etw-eC-EuO" id="jjH-l0-DJW"/>
+                        <outlet property="mcview" destination="NC9-jV-Zhe" id="VlX-7U-DyI"/>
+                        <outlet property="nextBtn" destination="bRk-bQ-uT2" id="Xcy-ff-jU5"/>
+                        <outlet property="promptTextView" destination="4cN-KF-Ni8" id="SxR-HY-2hz"/>
+                        <outlet property="quizView" destination="LNi-HA-aEB" id="uvg-la-cY9"/>
+                        <outlet property="saveProblemBtn" destination="01o-XI-LuM" id="Jck-MG-I7h"/>
+                        <outlet property="submitBtn" destination="fGC-H9-Hnx" id="3DX-3v-Bk9"/>
+                        <segue destination="YOM-fZ-uKE" kind="show" identifier="overview" customClass="SegueFromRight" customModule="Kintematics_Calculator" customModuleProvider="target" id="CYi-Zj-EmO"/>
+                        <segue destination="slO-OT-Jyi" kind="show" identifier="settings" id="fzS-2c-Oqo"/>
+                        <segue destination="KFw-es-DHg" kind="show" identifier="quiz setup" customClass="SegueFromLeft" customModule="Kintematics_Calculator" customModuleProvider="target" id="Kfw-eR-Gil"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c53-7c-icP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1880.625" y="1013.0281690140845"/>
+        </scene>
+        <!--Quiz Overview View Controller-->
+        <scene sceneID="0Sl-DT-DoZ">
+            <objects>
+                <viewController id="YOM-fZ-uKE" customClass="QuizOverviewViewController" customModule="Kintematics_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w1h-Oy-MF5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djv-jZ-cvA">
+                                <rect key="frame" x="12" y="20" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="button_exit.gif"/>
+                                <connections>
+                                    <segue destination="9Et-y9-SJG" kind="show" identifier="options" id="Exd-f0-aLN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hu1-Wj-rwS" customClass="MenuButton" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="85" y="500" width="150" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Select problem..."/>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vSC-2Y-2wm">
+                                <rect key="frame" x="20" y="100" width="280" height="380"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.29271143630000002" green="0.71488718900000003" blue="0.92925126899999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.57310872219999998" blue="0.84521732230000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="gGF-0P-bfx"/>
+                    </view>
+                    <connections>
+                        <outlet property="exitBtn" destination="Djv-jZ-cvA" id="LFj-s8-6If"/>
+                        <outlet property="overviewView" destination="vSC-2Y-2wm" id="3Qd-Mc-ph7"/>
+                        <outlet property="selectProblemBtn" destination="hu1-Wj-rwS" id="vNu-ML-UnZ"/>
+                        <segue destination="jsZ-VC-gPy" kind="show" identifier="showwork" id="DWK-z6-2cD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3GO-iG-mwu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2895" y="1060.5633802816901"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Igf-de-f5H">
+            <objects>
+                <viewController id="uLV-ti-7LE" customClass="ViewController" customModule="Kintematics_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s9a-8d-fSQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Portable Physicist" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="sgW-e1-Rhr" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="16" y="70" width="288" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.29803921570000003" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="80"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dre-gJ-0VJ">
+                                <rect key="frame" x="60" y="296" width="200" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <state key="normal" backgroundImage="button_forces.gif"/>
+                                <connections>
+                                    <action selector="forces:" destination="uLV-ti-7LE" eventType="touchUpInside" id="xcK-tC-82T"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2br-wO-4Mo">
+                                <rect key="frame" x="60" y="356" width="200" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" backgroundImage="button_kinetic-energy.gif"/>
+                                <connections>
+                                    <action selector="kineticenergy:" destination="uLV-ti-7LE" eventType="touchUpInside" id="zsH-QA-oag"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select a calculator:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="AOm-9C-CPV" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="16" y="173" width="284" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.29803921570000003" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.29803921570000003" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="60"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="topInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftInset">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightInset">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agg-iO-91i">
+                                <rect key="frame" x="274" y="20" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="gear.png"/>
+                                <connections>
+                                    <segue destination="slO-OT-Jyi" kind="show" identifier="settings" id="aLg-e7-FUL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eya-Re-Pnx">
+                                <rect key="frame" x="60" y="236" width="200" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <state key="normal" backgroundImage="button_kinematics.gif"/>
+                                <connections>
+                                    <action selector="kinematics:" destination="uLV-ti-7LE" eventType="touchUpInside" id="5uO-d4-TM7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hco-gP-eHq">
+                                <rect key="frame" x="60" y="416" width="200" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" backgroundImage="button_gravitational-force.gif"/>
+                                <connections>
+                                    <action selector="gravitationalforce:" destination="uLV-ti-7LE" eventType="touchUpInside" id="sXY-O8-lxX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.57310872219999998" blue="0.84521732230000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="Oau-go-EVx"/>
+                    </view>
+                    <connections>
+                        <outlet property="calculatorTitle" destination="sgW-e1-Rhr" id="1Vt-zo-bVA"/>
+                        <outlet property="forceBtn" destination="dre-gJ-0VJ" id="8OP-GR-vbT"/>
+                        <outlet property="gravitationalforceBtn" destination="Hco-gP-eHq" id="xrR-Jq-bNn"/>
+                        <outlet property="kinematicsBtn" destination="eya-Re-Pnx" id="snV-Ga-M43"/>
+                        <outlet property="kineticenergyBtn" destination="2br-wO-4Mo" id="Vty-57-9vI"/>
+                        <outlet property="selectCalculatorLabel" destination="AOm-9C-CPV" id="eK0-Kf-eBL"/>
+                        <outlet property="settingsBtn" destination="agg-iO-91i" id="fZD-3d-Cim"/>
+                        <segue destination="wHc-jq-L8T" kind="show" identifier="calculator" customClass="SegueFromRight" customModule="Kintematics_Calculator" customModuleProvider="target" id="asx-x8-gWD"/>
+                        <segue destination="slO-OT-Jyi" kind="show" identifier="prev" customClass="SegueFromLeft" customModule="Kintematics_Calculator" customModuleProvider="target" id="2ZW-9U-Tsf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MWA-No-QGG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1318.125" y="130.98591549295776"/>
+        </scene>
+        <!--Quiz Setup View Controller-->
+        <scene sceneID="7S5-pe-C0P">
+            <objects>
+                <viewController id="KFw-es-DHg" customClass="QuizSetupViewController" customModule="Kintematics_Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VKt-fn-0Pn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tYl-kI-JJ7">
+                                <rect key="frame" x="10" y="72" width="300" height="410"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="0bw-4b-cJ7" userLabel="Num Of Problems Txt Field" customClass="PaddingTextField" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="168" y="14" width="117" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="39"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="numOfProblemTFEndEditing:" destination="KFw-es-DHg" eventType="editingDidEnd" id="b4Y-Tj-mgc"/>
+                                        </connections>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type of Question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Vr-f7-CM9" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="61" width="105" height="82"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Ed-S4-Jr5">
+                                        <rect key="frame" x="10" y="327" width="291" height="84"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enable Units For Answer" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="ikO-YT-Kkt" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="10" width="146" height="61"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o27-d1-0Ft">
+                                                <rect key="frame" x="202" y="27" width="50" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                            </switch>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.0" green="0.43460821849999998" blue="0.53436310279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number Of Problems" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="ItS-w7-is1" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="9" y="8" width="106" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type of Unit Shown" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ook-11-cQz" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="164" width="105" height="57"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Type of Physics Problem" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="nVh-pG-CKG" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="10" y="241" width="105" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BOr-vA-A81" customClass="MenuButton" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="124" y="86" width="169" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Select question type..."/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POi-fy-1k3" customClass="MenuButton" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="124" y="177" width="169" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Select unit type..."/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJ5-9J-hgC" customClass="MenuButton" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                        <rect key="frame" x="123" y="256" width="172" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Select physics concept..."/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.43460821849999998" blue="0.53436310279999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quiz Options:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="yOY-YQ-L3G" customClass="PaddingLabel" customModule="Kintematics_Calculator" customModuleProvider="target">
+                                <rect key="frame" x="68" y="19" width="185" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.29803921570000003" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.0" green="0.29803921570000003" blue="0.4549019608" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="bottomInset">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APp-Zp-Wsf">
+                                <rect key="frame" x="15" y="18" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="return_arrow.png"/>
+                                <connections>
+                                    <segue destination="9Et-y9-SJG" kind="show" identifier="options" id="nGI-pE-kGl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u4f-HD-MC0">
+                                <rect key="frame" x="275" y="18" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="qmark.png"/>
+                                <connections>
+                                    <action selector="help:" destination="KFw-es-DHg" eventType="touchUpInside" id="C9t-c5-DZ0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQh-l8-Czo">
+                                <rect key="frame" x="100" y="490" width="120" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <state key="normal" backgroundImage="button_begin-quiz.gif"/>
+                                <state key="disabled" backgroundImage="button_begin-quiz_disabled.gif"/>
+                                <connections>
+                                    <action selector="beginQuizButton:" destination="KFw-es-DHg" eventType="touchUpInside" id="Eb2-jl-q6y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.57310872219999998" blue="0.84521732230000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="ib3-pl-PZw"/>
+                    </view>
+                    <connections>
+                        <outlet property="helpBtn" destination="u4f-HD-MC0" id="fiT-WT-WAq"/>
+                        <outlet property="numOfProblemsLabel" destination="ItS-w7-is1" id="fvZ-O2-fUt"/>
+                        <outlet property="numOfProblemsTxtField" destination="0bw-4b-cJ7" id="y9A-bj-o60"/>
+                        <outlet property="physicsProbTypeLabel" destination="nVh-pG-CKG" id="tfZ-VY-yeQ"/>
+                        <outlet property="questionTypeLabel" destination="2Vr-f7-CM9" id="0RB-32-MbV"/>
+                        <outlet property="quizOptionLabel" destination="yOY-YQ-L3G" id="fls-Qc-1jq"/>
+                        <outlet property="quizView" destination="tYl-kI-JJ7" id="iHn-V5-wpv"/>
+                        <outlet property="readyToQuiz" destination="lQh-l8-Czo" id="qrS-nH-KvK"/>
+                        <outlet property="returnBtn" destination="APp-Zp-Wsf" id="1Uq-dh-IAp"/>
+                        <outlet property="selectProblemTypeBtn" destination="eJ5-9J-hgC" id="y1U-AD-xDt"/>
+                        <outlet property="selectQuestionTypeBtn" destination="BOr-vA-A81" id="PWR-KB-DCC"/>
+                        <outlet property="selectUnitTypeBtn" destination="POi-fy-1k3" id="urd-LT-wUX"/>
+                        <outlet property="unitEnabledSwitch" destination="o27-d1-0Ft" id="FfS-sU-0Y2"/>
+                        <outlet property="unitTypeShownLabel" destination="Ook-11-cQz" id="eVC-BU-tGX"/>
+                        <outlet property="unitView" destination="6Ed-S4-Jr5" id="NIL-0M-aO2"/>
+                        <segue destination="Z2f-YV-n6H" kind="show" identifier="quiz" customClass="SegueFromRight" customModule="Kintematics_Calculator" customModuleProvider="target" id="xya-bI-vVy"/>
+                        <segue destination="hBk-Ch-Z2c" kind="show" identifier="practice problems" customClass="SegueFromLeft" customModule="Kintematics_Calculator" customModuleProvider="target" id="TUD-yv-eFw"/>
+                        <segue destination="slO-OT-Jyi" kind="show" identifier="settings" id="Xsg-YP-JVf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQj-TY-ip4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.875" y="942.25352112676057"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="button_a.gif" width="30" height="30"/>
+        <image name="button_a_disabled.gif" width="30" height="30"/>
+        <image name="button_b.gif" width="30" height="30"/>
+        <image name="button_b_disabled.gif" width="30" height="30"/>
+        <image name="button_begin-quiz.gif" width="180" height="40"/>
+        <image name="button_begin-quiz_disabled.gif" width="180" height="40"/>
+        <image name="button_c.gif" width="30" height="30"/>
+        <image name="button_c_disabled.gif" width="30" height="30"/>
+        <image name="button_calculate _disabled.gif" width="250" height="50"/>
+        <image name="button_calculate _highlighted.gif" width="250" height="50"/>
+        <image name="button_calculate.gif" width="250" height="50"/>
+        <image name="button_check.gif" width="180" height="40"/>
+        <image name="button_check_disabled.gif" width="180" height="40"/>
+        <image name="button_convert.gif" width="250" height="50"/>
+        <image name="button_convert_disabled.gif" width="250" height="50"/>
+        <image name="button_d.gif" width="30" height="30"/>
+        <image name="button_d_disabled.gif" width="30" height="30"/>
+        <image name="button_exit.gif" width="50" height="50"/>
+        <image name="button_forces.gif" width="280" height="50"/>
+        <image name="button_gravitational-force.gif" width="280" height="50"/>
+        <image name="button_help_1.gif" width="60" height="20"/>
+        <image name="button_hint.gif" width="50" height="50"/>
+        <image name="button_hint_disabled.gif" width="50" height="50"/>
+        <image name="button_kinematics.gif" width="280" height="50"/>
+        <image name="button_kinetic-energy.gif" width="280" height="50"/>
+        <image name="button_more.gif" width="50" height="50"/>
+        <image name="button_other-calculators.gif" width="280" height="50"/>
+        <image name="button_practice-problems.gif" width="280" height="50"/>
+        <image name="button_quiz.gif" width="280" height="50"/>
+        <image name="button_save-problem-disabled.gif" width="60" height="20"/>
+        <image name="button_save-problem.gif" width="60" height="20"/>
+        <image name="button_save.gif" width="120" height="30"/>
+        <image name="button_show-equation.gif" width="280" height="50"/>
+        <image name="button_show-past-conversions.gif" width="300" height="40"/>
+        <image name="button_show-work.gif" width="280" height="50"/>
+        <image name="button_show-work_disable.gif" width="280" height="50"/>
+        <image name="button_submit-answer.gif" width="250" height="50"/>
+        <image name="button_submit-answer_disabled.gif" width="250" height="50"/>
+        <image name="button_unit-converter.gif" width="280" height="50"/>
+        <image name="gear.png" width="720" height="720"/>
+        <image name="qmark.png" width="100" height="75"/>
+        <image name="return_arrow.png" width="100" height="100"/>
+        <image name="right_arrow.png" width="72" height="72"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="uKm-pQ-YbT"/>
+        <segue reference="u9l-gp-rPG"/>
+        <segue reference="CYi-Zj-EmO"/>
+        <segue reference="TUD-yv-eFw"/>
+        <segue reference="ARG-8B-EJG"/>
+        <segue reference="DLh-pe-rcZ"/>
+        <segue reference="Gb3-Ry-p55"/>
+        <segue reference="S5i-0l-zjF"/>
+        <segue reference="LhF-BO-WPq"/>
+        <segue reference="pvf-Bc-hEb"/>
+    </inferredMetricsTieBreakers>
 </document>

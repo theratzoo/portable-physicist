@@ -7,6 +7,98 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F5A29C6205369AF006C1B8F /* PracticeProblemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A29C5205369AF006C1B8F /* PracticeProblemsViewController.swift */; };
+		3F5A29CC20537402006C1B8F /* CalculatorPic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A29CB20537402006C1B8F /* CalculatorPic.jpg */; };
+		77282B762120F678007351E8 /* button_check_disabled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B572120F671007351E8 /* button_check_disabled.gif */; };
+		77282B782120F678007351E8 /* button_hide-help.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B592120F672007351E8 /* button_hide-help.gif */; };
+		77282B7A2120F678007351E8 /* button_calculate _disabled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B5B2120F672007351E8 /* button_calculate _disabled.gif */; };
+		77282B7C2120F678007351E8 /* button_c_disabled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B5D2120F673007351E8 /* button_c_disabled.gif */; };
+		77282B7E2120F678007351E8 /* button_calculate _highlighted.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B5F2120F673007351E8 /* button_calculate _highlighted.gif */; };
+		77282B7F2120F678007351E8 /* button_exit.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B602120F674007351E8 /* button_exit.gif */; };
+		77282B812120F678007351E8 /* button_another-calculation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B622120F674007351E8 /* button_another-calculation.gif */; };
+		77282B822120F678007351E8 /* button_calculate.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B632120F674007351E8 /* button_calculate.gif */; };
+		77282B832120F678007351E8 /* button_convert.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B642120F675007351E8 /* button_convert.gif */; };
+		77282B852120F678007351E8 /* button_another-conversion.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B662120F675007351E8 /* button_another-conversion.gif */; };
+		77282B892120F678007351E8 /* button_more.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B6A2120F676007351E8 /* button_more.gif */; };
+		77282B8B2120F678007351E8 /* button_b_disabled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B6C2120F676007351E8 /* button_b_disabled.gif */; };
+		77282B8C2120F678007351E8 /* button_b.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B6D2120F676007351E8 /* button_b.gif */; };
+		77282B8F2120F678007351E8 /* button_hide-past-conversions.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B702120F677007351E8 /* button_hide-past-conversions.gif */; };
+		77282B902120F678007351E8 /* button_begin-quiz.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B712120F677007351E8 /* button_begin-quiz.gif */; };
+		77282B922120F678007351E8 /* button_convert_disabled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77282B732120F678007351E8 /* button_convert_disabled.gif */; };
+		7731DECC210628D10050D337 /* QuizOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7731DECB210628D10050D337 /* QuizOverviewViewController.swift */; };
+		7731DECE2106347E0050D337 /* QuizSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7731DECD2106347E0050D337 /* QuizSetupViewController.swift */; };
+		7731DEDE21065CA30050D337 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7731DEDD21065CA30050D337 /* CustomButton.swift */; };
+		7731DEFF210667570050D337 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7731DEFE210667570050D337 /* PaddingLabel.swift */; };
+		7749CCD721500D6E0001C39D /* PaddingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7749CCD621500D6E0001C39D /* PaddingTextField.swift */; };
+		7749CCD92156ACDB0001C39D /* force.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7749CCD82156ACDB0001C39D /* force.gif */; };
+		7749CCE02156DEB70001C39D /* kinematics4.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7749CCDB2156DEB70001C39D /* kinematics4.gif */; };
+		7749CCE12156DEB70001C39D /* kinematics2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7749CCDC2156DEB70001C39D /* kinematics2.gif */; };
+		7749CCE22156DEB70001C39D /* kinematics1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7749CCDD2156DEB70001C39D /* kinematics1.gif */; };
+		7749CCE32156DEB70001C39D /* kinematics5.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7749CCDE2156DEB70001C39D /* kinematics5.gif */; };
+		7749CCE52156E20B0001C39D /* kineticenergyeq.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7749CCE42156E20B0001C39D /* kineticenergyeq.gif */; };
+		7749CCE72156E2B50001C39D /* gravitationalforceeq.gif in Resources */ = {isa = PBXBuildFile; fileRef = 7749CCE62156E2B40001C39D /* gravitationalforceeq.gif */; };
+		77B758682203F00200283417 /* button_help_1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77B758672203F00100283417 /* button_help_1.gif */; };
+		77B7586A2204849000283417 /* button_exit-help.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77B758692204848F00283417 /* button_exit-help.gif */; };
+		77B7586C2208B05800283417 /* button_save-problem-disabled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77B7586B2208B05800283417 /* button_save-problem-disabled.gif */; };
+		77B7586E220A4C5000283417 /* applogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 77B7586D220A4C5000283417 /* applogo.jpg */; };
+		77B75872220B8E3400283417 /* SegueFromLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B75871220B8E3400283417 /* SegueFromLeft.swift */; };
+		77B75874220B953200283417 /* SegueFromRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B75873220B953200283417 /* SegueFromRight.swift */; };
+		77B75876220FBA5B00283417 /* kinematics3.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77B75875220FBA5B00283417 /* kinematics3.gif */; };
+		77CCA11021DED898005BE99A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CCA10F21DED898005BE99A /* SettingsViewController.swift */; };
+		77CCA11221E3ACA1005BE99A /* LocalPracticeProblem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CCA11121E3ACA1005BE99A /* LocalPracticeProblem.swift */; };
+		77CCA11721F0F33A005BE99A /* MenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77CCA11621F0F33A005BE99A /* MenuButton.swift */; };
+		77DDDBF921F6A536008D2E55 /* button_save-problem.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77DDDBF821F6A535008D2E55 /* button_save-problem.gif */; };
+		77DDDBFB21FB4A77008D2E55 /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDDBFA21FB4A77008D2E55 /* DoneButton.swift */; };
+		77E4F9FB2120F7DE007BBEEB /* cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9C72120F7D4007BBEEB /* cloud.png */; };
+		77E4F9FC2120F7DE007BBEEB /* button_other-calculators.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9C82120F7D4007BBEEB /* button_other-calculators.gif */; };
+		77E4F9FD2120F7DE007BBEEB /* button_gravitational-force.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9C92120F7D4007BBEEB /* button_gravitational-force.gif */; };
+		77E4F9FF2120F7DE007BBEEB /* button_show-work_disable.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9CB2120F7D5007BBEEB /* button_show-work_disable.gif */; };
+		77E4FA022120F7DE007BBEEB /* qmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9CE2120F7D5007BBEEB /* qmark.png */; };
+		77E4FA072120F7DE007BBEEB /* button_d_disabled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9D32120F7D6007BBEEB /* button_d_disabled.gif */; };
+		77E4FA082120F7DE007BBEEB /* button_help.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9D42120F7D6007BBEEB /* button_help.gif */; };
+		77E4FA092120F7DE007BBEEB /* gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9D52120F7D6007BBEEB /* gear.png */; };
+		77E4FA0A2120F7DE007BBEEB /* button_begin-quiz_disabled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9D62120F7D6007BBEEB /* button_begin-quiz_disabled.gif */; };
+		77E4FA0F2120F7DE007BBEEB /* button_a.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9DB2120F7D7007BBEEB /* button_a.gif */; };
+		77E4FA102120F7DE007BBEEB /* button_kinematics.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9DC2120F7D7007BBEEB /* button_kinematics.gif */; };
+		77E4FA122120F7DE007BBEEB /* cloud3.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9DE2120F7D7007BBEEB /* cloud3.png */; };
+		77E4FA132120F7DE007BBEEB /* button_kinetic-energy.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9DF2120F7D7007BBEEB /* button_kinetic-energy.gif */; };
+		77E4FA142120F7DE007BBEEB /* button_submit-answer.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9E02120F7D8007BBEEB /* button_submit-answer.gif */; };
+		77E4FA152120F7DE007BBEEB /* button_show-past-conversions.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9E12120F7D8007BBEEB /* button_show-past-conversions.gif */; };
+		77E4FA162120F7DE007BBEEB /* button_check.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9E22120F7D8007BBEEB /* button_check.gif */; };
+		77E4FA172120F7DE007BBEEB /* button_practice-problems.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9E32120F7D8007BBEEB /* button_practice-problems.gif */; };
+		77E4FA182120F7DE007BBEEB /* button_hint_disabled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9E42120F7D9007BBEEB /* button_hint_disabled.gif */; };
+		77E4FA192120F7DE007BBEEB /* button_quiz.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9E52120F7D9007BBEEB /* button_quiz.gif */; };
+		77E4FA1A2120F7DE007BBEEB /* button_restart-quiz.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9E62120F7D9007BBEEB /* button_restart-quiz.gif */; };
+		77E4FA1B2120F7DE007BBEEB /* button_submit-answer_disabled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9E72120F7D9007BBEEB /* button_submit-answer_disabled.gif */; };
+		77E4FA1C2120F7DE007BBEEB /* left_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9E82120F7D9007BBEEB /* left_arrow.png */; };
+		77E4FA1D2120F7DE007BBEEB /* button_d.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9E92120F7DA007BBEEB /* button_d.gif */; };
+		77E4FA1F2120F7DE007BBEEB /* return_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9EB2120F7DA007BBEEB /* return_arrow.png */; };
+		77E4FA202120F7DE007BBEEB /* cloud2.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9EC2120F7DB007BBEEB /* cloud2.png */; };
+		77E4FA222120F7DE007BBEEB /* button_show-work.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9EE2120F7DB007BBEEB /* button_show-work.gif */; };
+		77E4FA232120F7DE007BBEEB /* button_c.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9EF2120F7DB007BBEEB /* button_c.gif */; };
+		77E4FA242120F7DE007BBEEB /* button_forces.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9F02120F7DB007BBEEB /* button_forces.gif */; };
+		77E4FA252120F7DE007BBEEB /* button_hint.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9F12120F7DB007BBEEB /* button_hint.gif */; };
+		77E4FA272120F7DE007BBEEB /* button_unit-converter.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9F32120F7DC007BBEEB /* button_unit-converter.gif */; };
+		77E4FA292120F7DE007BBEEB /* button.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9F52120F7DC007BBEEB /* button.png */; };
+		77E4FA2A2120F7DE007BBEEB /* right_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9F62120F7DC007BBEEB /* right_arrow.png */; };
+		77E4FA2B2120F7DE007BBEEB /* button_a_disabled.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9F72120F7DD007BBEEB /* button_a_disabled.gif */; };
+		77E4FA2C2120F7DE007BBEEB /* button_show-equation.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9F82120F7DD007BBEEB /* button_show-equation.gif */; };
+		77E4FA2D2120F7DE007BBEEB /* button_save.gif in Resources */ = {isa = PBXBuildFile; fileRef = 77E4F9F92120F7DD007BBEEB /* button_save.gif */; };
+		77E4FA2F21320A88007BBEEB /* faceimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 77E4FA2E21320A88007BBEEB /* faceimg.png */; };
+		A304E0F92097F2CC00A1E907 /* Unknown.swift in Sources */ = {isa = PBXBuildFile; fileRef = A304E0F82097F2CC00A1E907 /* Unknown.swift */; };
+		A30C391420C59A4800180E99 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C391320C59A4800180E99 /* CalculatorViewController.swift */; };
+		A30C391620C81F3900180E99 /* Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C391520C81F3900180E99 /* Equation.swift */; };
+		A30C391920C846A400180E99 /* GravitationalForceEquation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A30C391820C846A400180E99 /* GravitationalForceEquation.swift */; };
+		A38B72FD2068248D00A08644 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38B72FC2068248D00A08644 /* QuizViewController.swift */; };
+		A397FBDA20B8AE0000B85714 /* KineticEnergyEquations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A397FBD920B8AE0000B85714 /* KineticEnergyEquations.swift */; };
+		A3A59842209E2DB200FC23B5 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A59841209E2DB200FC23B5 /* OptionsViewController.swift */; };
+		A3CBCA0320CC364B000EF437 /* ShowWorkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CBCA0220CC364B000EF437 /* ShowWorkViewController.swift */; };
+		A3CBCA0E20CD713E000EF437 /* ShowEquationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CBCA0D20CD713E000EF437 /* ShowEquationViewController.swift */; };
+		A3CBCA1C20D164FE000EF437 /* HelperStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3CBCA1B20D164FE000EF437 /* HelperStuff.swift */; };
+		A3E0111D2094E5490014E5A3 /* KinematicsEquations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E0111C2094E5490014E5A3 /* KinematicsEquations.swift */; };
+		A3E06AE820A913D20028F505 /* ForceEquations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E06AE720A913D20028F505 /* ForceEquations.swift */; };
+		A3E06AEC20A9141D0028F505 /* PhysicsVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E06AEB20A9141D0028F505 /* PhysicsVariable.swift */; };
+		A3F83119204B0F4900ED3579 /* UnitConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F83118204B0F4900ED3579 /* UnitConverterViewController.swift */; };
 		F76388E92016221B00854BE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76388E82016221B00854BE6 /* AppDelegate.swift */; };
 		F76388EB2016221B00854BE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76388EA2016221B00854BE6 /* ViewController.swift */; };
 		F76388EE2016221B00854BE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F76388EC2016221B00854BE6 /* Main.storyboard */; };
@@ -34,6 +126,129 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F5A29C5205369AF006C1B8F /* PracticeProblemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeProblemsViewController.swift; sourceTree = "<group>"; };
+		3F5A29CB20537402006C1B8F /* CalculatorPic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CalculatorPic.jpg; sourceTree = "<group>"; };
+		77282B572120F671007351E8 /* button_check_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_check_disabled.gif; sourceTree = "<group>"; };
+		77282B582120F672007351E8 /* button_a.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_a.gif; sourceTree = "<group>"; };
+		77282B592120F672007351E8 /* button_hide-help.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_hide-help.gif"; sourceTree = "<group>"; };
+		77282B5A2120F672007351E8 /* button_kinematics.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_kinematics.gif; sourceTree = "<group>"; };
+		77282B5B2120F672007351E8 /* button_calculate _disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_calculate _disabled.gif"; sourceTree = "<group>"; };
+		77282B5C2120F673007351E8 /* button_gravitational-force.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_gravitational-force.gif"; sourceTree = "<group>"; };
+		77282B5D2120F673007351E8 /* button_c_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_c_disabled.gif; sourceTree = "<group>"; };
+		77282B5E2120F673007351E8 /* button_kinetic-energy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_kinetic-energy.gif"; sourceTree = "<group>"; };
+		77282B5F2120F673007351E8 /* button_calculate _highlighted.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_calculate _highlighted.gif"; sourceTree = "<group>"; };
+		77282B602120F674007351E8 /* button_exit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_exit.gif; sourceTree = "<group>"; };
+		77282B612120F674007351E8 /* button_check.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_check.gif; sourceTree = "<group>"; };
+		77282B622120F674007351E8 /* button_another-calculation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_another-calculation.gif"; sourceTree = "<group>"; };
+		77282B632120F674007351E8 /* button_calculate.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_calculate.gif; sourceTree = "<group>"; };
+		77282B642120F675007351E8 /* button_convert.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_convert.gif; sourceTree = "<group>"; };
+		77282B652120F675007351E8 /* button_hint_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_hint_disabled.gif; sourceTree = "<group>"; };
+		77282B662120F675007351E8 /* button_another-conversion.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_another-conversion.gif"; sourceTree = "<group>"; };
+		77282B672120F675007351E8 /* button_d_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_d_disabled.gif; sourceTree = "<group>"; };
+		77282B682120F675007351E8 /* button_help.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_help.gif; sourceTree = "<group>"; };
+		77282B692120F675007351E8 /* button_d.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_d.gif; sourceTree = "<group>"; };
+		77282B6A2120F676007351E8 /* button_more.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_more.gif; sourceTree = "<group>"; };
+		77282B6B2120F676007351E8 /* button_begin-quiz_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_begin-quiz_disabled.gif"; sourceTree = "<group>"; };
+		77282B6C2120F676007351E8 /* button_b_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_b_disabled.gif; sourceTree = "<group>"; };
+		77282B6D2120F676007351E8 /* button_b.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_b.gif; sourceTree = "<group>"; };
+		77282B6E2120F677007351E8 /* button_c.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_c.gif; sourceTree = "<group>"; };
+		77282B6F2120F677007351E8 /* button_forces.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_forces.gif; sourceTree = "<group>"; };
+		77282B702120F677007351E8 /* button_hide-past-conversions.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_hide-past-conversions.gif"; sourceTree = "<group>"; };
+		77282B712120F677007351E8 /* button_begin-quiz.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_begin-quiz.gif"; sourceTree = "<group>"; };
+		77282B722120F678007351E8 /* button_hint.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_hint.gif; sourceTree = "<group>"; };
+		77282B732120F678007351E8 /* button_convert_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_convert_disabled.gif; sourceTree = "<group>"; };
+		77282B742120F678007351E8 /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		77282B752120F678007351E8 /* button_a_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_a_disabled.gif; sourceTree = "<group>"; };
+		7731DECB210628D10050D337 /* QuizOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizOverviewViewController.swift; sourceTree = "<group>"; };
+		7731DECD2106347E0050D337 /* QuizSetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSetupViewController.swift; sourceTree = "<group>"; };
+		7731DEDD21065CA30050D337 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		7731DEFE210667570050D337 /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		7749CCD621500D6E0001C39D /* PaddingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTextField.swift; sourceTree = "<group>"; };
+		7749CCD82156ACDB0001C39D /* force.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = force.gif; sourceTree = "<group>"; };
+		7749CCDB2156DEB70001C39D /* kinematics4.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = kinematics4.gif; sourceTree = "<group>"; };
+		7749CCDC2156DEB70001C39D /* kinematics2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = kinematics2.gif; sourceTree = "<group>"; };
+		7749CCDD2156DEB70001C39D /* kinematics1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = kinematics1.gif; sourceTree = "<group>"; };
+		7749CCDE2156DEB70001C39D /* kinematics5.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = kinematics5.gif; sourceTree = "<group>"; };
+		7749CCE42156E20B0001C39D /* kineticenergyeq.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = kineticenergyeq.gif; sourceTree = "<group>"; };
+		7749CCE62156E2B40001C39D /* gravitationalforceeq.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gravitationalforceeq.gif; sourceTree = "<group>"; };
+		77B758672203F00100283417 /* button_help_1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_help_1.gif; sourceTree = "<group>"; };
+		77B758692204848F00283417 /* button_exit-help.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_exit-help.gif"; sourceTree = "<group>"; };
+		77B7586B2208B05800283417 /* button_save-problem-disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_save-problem-disabled.gif"; sourceTree = "<group>"; };
+		77B7586D220A4C5000283417 /* applogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = applogo.jpg; path = "Kintematics Calculator/applogo.jpg"; sourceTree = SOURCE_ROOT; };
+		77B75871220B8E3400283417 /* SegueFromLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromLeft.swift; sourceTree = "<group>"; };
+		77B75873220B953200283417 /* SegueFromRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueFromRight.swift; sourceTree = "<group>"; };
+		77B75875220FBA5B00283417 /* kinematics3.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = kinematics3.gif; sourceTree = "<group>"; };
+		77CCA10F21DED898005BE99A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		77CCA11121E3ACA1005BE99A /* LocalPracticeProblem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalPracticeProblem.swift; sourceTree = "<group>"; };
+		77CCA11621F0F33A005BE99A /* MenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuButton.swift; sourceTree = "<group>"; };
+		77DDDBF821F6A535008D2E55 /* button_save-problem.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_save-problem.gif"; sourceTree = "<group>"; };
+		77DDDBFA21FB4A77008D2E55 /* DoneButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneButton.swift; sourceTree = "<group>"; };
+		77E4F9C62120F7D4007BBEEB /* button_hide-help.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_hide-help.gif"; sourceTree = "<group>"; };
+		77E4F9C72120F7D4007BBEEB /* cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud.png; sourceTree = "<group>"; };
+		77E4F9C82120F7D4007BBEEB /* button_other-calculators.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_other-calculators.gif"; sourceTree = "<group>"; };
+		77E4F9C92120F7D4007BBEEB /* button_gravitational-force.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_gravitational-force.gif"; sourceTree = "<group>"; };
+		77E4F9CA2120F7D4007BBEEB /* button_c_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_c_disabled.gif; sourceTree = "<group>"; };
+		77E4F9CB2120F7D5007BBEEB /* button_show-work_disable.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_show-work_disable.gif"; sourceTree = "<group>"; };
+		77E4F9CC2120F7D5007BBEEB /* button_calculate _highlighted.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_calculate _highlighted.gif"; sourceTree = "<group>"; };
+		77E4F9CD2120F7D5007BBEEB /* button_exit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_exit.gif; sourceTree = "<group>"; };
+		77E4F9CE2120F7D5007BBEEB /* qmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qmark.png; sourceTree = "<group>"; };
+		77E4F9CF2120F7D5007BBEEB /* button_another-calculation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_another-calculation.gif"; sourceTree = "<group>"; };
+		77E4F9D02120F7D5007BBEEB /* button_calculate.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_calculate.gif; sourceTree = "<group>"; };
+		77E4F9D12120F7D6007BBEEB /* button_convert.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_convert.gif; sourceTree = "<group>"; };
+		77E4F9D22120F7D6007BBEEB /* button_another-conversion.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_another-conversion.gif"; sourceTree = "<group>"; };
+		77E4F9D32120F7D6007BBEEB /* button_d_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_d_disabled.gif; sourceTree = "<group>"; };
+		77E4F9D42120F7D6007BBEEB /* button_help.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_help.gif; sourceTree = "<group>"; };
+		77E4F9D52120F7D6007BBEEB /* gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gear.png; sourceTree = "<group>"; };
+		77E4F9D62120F7D6007BBEEB /* button_begin-quiz_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_begin-quiz_disabled.gif"; sourceTree = "<group>"; };
+		77E4F9D72120F7D6007BBEEB /* button_b.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_b.gif; sourceTree = "<group>"; };
+		77E4F9D82120F7D7007BBEEB /* button_hide-past-conversions.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_hide-past-conversions.gif"; sourceTree = "<group>"; };
+		77E4F9D92120F7D7007BBEEB /* button_convert_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_convert_disabled.gif; sourceTree = "<group>"; };
+		77E4F9DA2120F7D7007BBEEB /* button_check_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_check_disabled.gif; sourceTree = "<group>"; };
+		77E4F9DB2120F7D7007BBEEB /* button_a.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_a.gif; sourceTree = "<group>"; };
+		77E4F9DC2120F7D7007BBEEB /* button_kinematics.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_kinematics.gif; sourceTree = "<group>"; };
+		77E4F9DD2120F7D7007BBEEB /* button_calculate _disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_calculate _disabled.gif"; sourceTree = "<group>"; };
+		77E4F9DE2120F7D7007BBEEB /* cloud3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud3.png; sourceTree = "<group>"; };
+		77E4F9DF2120F7D7007BBEEB /* button_kinetic-energy.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_kinetic-energy.gif"; sourceTree = "<group>"; };
+		77E4F9E02120F7D8007BBEEB /* button_submit-answer.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_submit-answer.gif"; sourceTree = "<group>"; };
+		77E4F9E12120F7D8007BBEEB /* button_show-past-conversions.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_show-past-conversions.gif"; sourceTree = "<group>"; };
+		77E4F9E22120F7D8007BBEEB /* button_check.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_check.gif; sourceTree = "<group>"; };
+		77E4F9E32120F7D8007BBEEB /* button_practice-problems.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_practice-problems.gif"; sourceTree = "<group>"; };
+		77E4F9E42120F7D9007BBEEB /* button_hint_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_hint_disabled.gif; sourceTree = "<group>"; };
+		77E4F9E52120F7D9007BBEEB /* button_quiz.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_quiz.gif; sourceTree = "<group>"; };
+		77E4F9E62120F7D9007BBEEB /* button_restart-quiz.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_restart-quiz.gif"; sourceTree = "<group>"; };
+		77E4F9E72120F7D9007BBEEB /* button_submit-answer_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_submit-answer_disabled.gif"; sourceTree = "<group>"; };
+		77E4F9E82120F7D9007BBEEB /* left_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left_arrow.png; sourceTree = "<group>"; };
+		77E4F9E92120F7DA007BBEEB /* button_d.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_d.gif; sourceTree = "<group>"; };
+		77E4F9EA2120F7DA007BBEEB /* button_more.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_more.gif; sourceTree = "<group>"; };
+		77E4F9EB2120F7DA007BBEEB /* return_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = return_arrow.png; sourceTree = "<group>"; };
+		77E4F9EC2120F7DB007BBEEB /* cloud2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloud2.png; sourceTree = "<group>"; };
+		77E4F9ED2120F7DB007BBEEB /* button_b_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_b_disabled.gif; sourceTree = "<group>"; };
+		77E4F9EE2120F7DB007BBEEB /* button_show-work.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_show-work.gif"; sourceTree = "<group>"; };
+		77E4F9EF2120F7DB007BBEEB /* button_c.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_c.gif; sourceTree = "<group>"; };
+		77E4F9F02120F7DB007BBEEB /* button_forces.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_forces.gif; sourceTree = "<group>"; };
+		77E4F9F12120F7DB007BBEEB /* button_hint.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_hint.gif; sourceTree = "<group>"; };
+		77E4F9F22120F7DC007BBEEB /* button_begin-quiz.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_begin-quiz.gif"; sourceTree = "<group>"; };
+		77E4F9F32120F7DC007BBEEB /* button_unit-converter.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_unit-converter.gif"; sourceTree = "<group>"; };
+		77E4F9F52120F7DC007BBEEB /* button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button.png; sourceTree = "<group>"; };
+		77E4F9F62120F7DC007BBEEB /* right_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right_arrow.png; sourceTree = "<group>"; };
+		77E4F9F72120F7DD007BBEEB /* button_a_disabled.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_a_disabled.gif; sourceTree = "<group>"; };
+		77E4F9F82120F7DD007BBEEB /* button_show-equation.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "button_show-equation.gif"; sourceTree = "<group>"; };
+		77E4F9F92120F7DD007BBEEB /* button_save.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = button_save.gif; sourceTree = "<group>"; };
+		77E4FA2E21320A88007BBEEB /* faceimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = faceimg.png; sourceTree = "<group>"; };
+		A304E0F82097F2CC00A1E907 /* Unknown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unknown.swift; sourceTree = "<group>"; };
+		A30C391320C59A4800180E99 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		A30C391520C81F3900180E99 /* Equation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Equation.swift; sourceTree = "<group>"; };
+		A30C391820C846A400180E99 /* GravitationalForceEquation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GravitationalForceEquation.swift; sourceTree = "<group>"; };
+		A38B72FC2068248D00A08644 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		A397FBD920B8AE0000B85714 /* KineticEnergyEquations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KineticEnergyEquations.swift; sourceTree = "<group>"; };
+		A3A59841209E2DB200FC23B5 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		A3CBCA0220CC364B000EF437 /* ShowWorkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowWorkViewController.swift; sourceTree = "<group>"; };
+		A3CBCA0D20CD713E000EF437 /* ShowEquationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowEquationViewController.swift; sourceTree = "<group>"; };
+		A3CBCA1B20D164FE000EF437 /* HelperStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperStuff.swift; sourceTree = "<group>"; };
+		A3E0111C2094E5490014E5A3 /* KinematicsEquations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KinematicsEquations.swift; sourceTree = "<group>"; };
+		A3E06AE720A913D20028F505 /* ForceEquations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForceEquations.swift; sourceTree = "<group>"; };
+		A3E06AEB20A9141D0028F505 /* PhysicsVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsVariable.swift; sourceTree = "<group>"; };
+		A3F83118204B0F4900ED3579 /* UnitConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitConverterViewController.swift; sourceTree = "<group>"; };
 		F76388E52016221B00854BE6 /* Kintematics Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kintematics Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F76388E82016221B00854BE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F76388EA2016221B00854BE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,9 +289,125 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7731DEE121065F3B0050D337 /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				77E4F9F72120F7DD007BBEEB /* button_a_disabled.gif */,
+				77E4F9DB2120F7D7007BBEEB /* button_a.gif */,
+				77E4F9CF2120F7D5007BBEEB /* button_another-calculation.gif */,
+				77E4F9D22120F7D6007BBEEB /* button_another-conversion.gif */,
+				77E4F9ED2120F7DB007BBEEB /* button_b_disabled.gif */,
+				77E4F9D72120F7D6007BBEEB /* button_b.gif */,
+				77E4F9D62120F7D6007BBEEB /* button_begin-quiz_disabled.gif */,
+				77E4F9F22120F7DC007BBEEB /* button_begin-quiz.gif */,
+				77E4F9CA2120F7D4007BBEEB /* button_c_disabled.gif */,
+				77E4F9EF2120F7DB007BBEEB /* button_c.gif */,
+				77E4F9DD2120F7D7007BBEEB /* button_calculate _disabled.gif */,
+				77E4F9CC2120F7D5007BBEEB /* button_calculate _highlighted.gif */,
+				77E4F9D02120F7D5007BBEEB /* button_calculate.gif */,
+				77E4F9DA2120F7D7007BBEEB /* button_check_disabled.gif */,
+				77E4F9E22120F7D8007BBEEB /* button_check.gif */,
+				77E4F9D92120F7D7007BBEEB /* button_convert_disabled.gif */,
+				77E4F9D12120F7D6007BBEEB /* button_convert.gif */,
+				77E4F9D32120F7D6007BBEEB /* button_d_disabled.gif */,
+				77E4F9E92120F7DA007BBEEB /* button_d.gif */,
+				77E4F9CD2120F7D5007BBEEB /* button_exit.gif */,
+				77B758692204848F00283417 /* button_exit-help.gif */,
+				77E4F9F02120F7DB007BBEEB /* button_forces.gif */,
+				77E4F9C92120F7D4007BBEEB /* button_gravitational-force.gif */,
+				77E4F9D42120F7D6007BBEEB /* button_help.gif */,
+				77B758672203F00100283417 /* button_help_1.gif */,
+				77E4F9C62120F7D4007BBEEB /* button_hide-help.gif */,
+				77E4F9D82120F7D7007BBEEB /* button_hide-past-conversions.gif */,
+				77E4F9E42120F7D9007BBEEB /* button_hint_disabled.gif */,
+				77E4F9F12120F7DB007BBEEB /* button_hint.gif */,
+				77E4F9DC2120F7D7007BBEEB /* button_kinematics.gif */,
+				77E4F9DF2120F7D7007BBEEB /* button_kinetic-energy.gif */,
+				77E4F9EA2120F7DA007BBEEB /* button_more.gif */,
+				77E4F9C82120F7D4007BBEEB /* button_other-calculators.gif */,
+				77E4F9E32120F7D8007BBEEB /* button_practice-problems.gif */,
+				77E4F9E52120F7D9007BBEEB /* button_quiz.gif */,
+				77E4F9E62120F7D9007BBEEB /* button_restart-quiz.gif */,
+				77E4F9F92120F7DD007BBEEB /* button_save.gif */,
+				77DDDBF821F6A535008D2E55 /* button_save-problem.gif */,
+				77B7586B2208B05800283417 /* button_save-problem-disabled.gif */,
+				77E4F9F82120F7DD007BBEEB /* button_show-equation.gif */,
+				77E4F9E12120F7D8007BBEEB /* button_show-past-conversions.gif */,
+				77E4F9CB2120F7D5007BBEEB /* button_show-work_disable.gif */,
+				77E4F9EE2120F7DB007BBEEB /* button_show-work.gif */,
+				77E4F9E72120F7D9007BBEEB /* button_submit-answer_disabled.gif */,
+				77E4F9E02120F7D8007BBEEB /* button_submit-answer.gif */,
+				77E4F9F32120F7DC007BBEEB /* button_unit-converter.gif */,
+				77E4F9F52120F7DC007BBEEB /* button.png */,
+				77E4F9C72120F7D4007BBEEB /* cloud.png */,
+				77E4F9EC2120F7DB007BBEEB /* cloud2.png */,
+				77E4F9DE2120F7D7007BBEEB /* cloud3.png */,
+				77E4F9D52120F7D6007BBEEB /* gear.png */,
+				77E4F9E82120F7D9007BBEEB /* left_arrow.png */,
+				77E4F9CE2120F7D5007BBEEB /* qmark.png */,
+				77E4F9EB2120F7DA007BBEEB /* return_arrow.png */,
+				77E4F9F62120F7DC007BBEEB /* right_arrow.png */,
+				77282B752120F678007351E8 /* button_a_disabled.gif */,
+				77282B582120F672007351E8 /* button_a.gif */,
+				77282B622120F674007351E8 /* button_another-calculation.gif */,
+				77282B662120F675007351E8 /* button_another-conversion.gif */,
+				77282B6C2120F676007351E8 /* button_b_disabled.gif */,
+				77282B6D2120F676007351E8 /* button_b.gif */,
+				77282B6B2120F676007351E8 /* button_begin-quiz_disabled.gif */,
+				77282B712120F677007351E8 /* button_begin-quiz.gif */,
+				77282B5D2120F673007351E8 /* button_c_disabled.gif */,
+				77282B6E2120F677007351E8 /* button_c.gif */,
+				77282B5B2120F672007351E8 /* button_calculate _disabled.gif */,
+				77282B5F2120F673007351E8 /* button_calculate _highlighted.gif */,
+				77282B632120F674007351E8 /* button_calculate.gif */,
+				77282B572120F671007351E8 /* button_check_disabled.gif */,
+				77282B612120F674007351E8 /* button_check.gif */,
+				77282B732120F678007351E8 /* button_convert_disabled.gif */,
+				77282B642120F675007351E8 /* button_convert.gif */,
+				77282B672120F675007351E8 /* button_d_disabled.gif */,
+				77282B692120F675007351E8 /* button_d.gif */,
+				77282B602120F674007351E8 /* button_exit.gif */,
+				77282B6F2120F677007351E8 /* button_forces.gif */,
+				77282B5C2120F673007351E8 /* button_gravitational-force.gif */,
+				77282B682120F675007351E8 /* button_help.gif */,
+				77282B592120F672007351E8 /* button_hide-help.gif */,
+				77282B702120F677007351E8 /* button_hide-past-conversions.gif */,
+				77282B652120F675007351E8 /* button_hint_disabled.gif */,
+				77282B722120F678007351E8 /* button_hint.gif */,
+				77282B5A2120F672007351E8 /* button_kinematics.gif */,
+				77282B5E2120F673007351E8 /* button_kinetic-energy.gif */,
+				77282B6A2120F676007351E8 /* button_more.gif */,
+				77282B742120F678007351E8 /* button.png */,
+			);
+			path = buttons;
+			sourceTree = "<group>";
+		};
+		A3CBCA0A20CD6265000EF437 /* eq images */ = {
+			isa = PBXGroup;
+			children = (
+				7749CCDD2156DEB70001C39D /* kinematics1.gif */,
+				7749CCDC2156DEB70001C39D /* kinematics2.gif */,
+				77B75875220FBA5B00283417 /* kinematics3.gif */,
+				7749CCDB2156DEB70001C39D /* kinematics4.gif */,
+				7749CCDE2156DEB70001C39D /* kinematics5.gif */,
+				7749CCE42156E20B0001C39D /* kineticenergyeq.gif */,
+				7749CCD82156ACDB0001C39D /* force.gif */,
+				7749CCE62156E2B40001C39D /* gravitationalforceeq.gif */,
+				3F5A29CB20537402006C1B8F /* CalculatorPic.jpg */,
+			);
+			path = "eq images";
+			sourceTree = "<group>";
+		};
 		F76388DC2016221B00854BE6 = {
 			isa = PBXGroup;
 			children = (
+				77CCA11621F0F33A005BE99A /* MenuButton.swift */,
+				77B75871220B8E3400283417 /* SegueFromLeft.swift */,
+				77B75873220B953200283417 /* SegueFromRight.swift */,
+				77DDDBFA21FB4A77008D2E55 /* DoneButton.swift */,
+				7731DEDD21065CA30050D337 /* CustomButton.swift */,
+				7731DEFE210667570050D337 /* PaddingLabel.swift */,
+				7749CCD621500D6E0001C39D /* PaddingTextField.swift */,
 				F76388E72016221B00854BE6 /* Kintematics Calculator */,
 				F76388FC2016221B00854BE6 /* Kintematics CalculatorTests */,
 				F76389072016221B00854BE6 /* Kintematics CalculatorUITests */,
@@ -100,7 +431,30 @@
 				F76388E82016221B00854BE6 /* AppDelegate.swift */,
 				F76388EA2016221B00854BE6 /* ViewController.swift */,
 				F76388EC2016221B00854BE6 /* Main.storyboard */,
+				77CCA10F21DED898005BE99A /* SettingsViewController.swift */,
+				A30C391320C59A4800180E99 /* CalculatorViewController.swift */,
+				A3A59841209E2DB200FC23B5 /* OptionsViewController.swift */,
+				A3CBCA0D20CD713E000EF437 /* ShowEquationViewController.swift */,
+				A3CBCA0220CC364B000EF437 /* ShowWorkViewController.swift */,
+				3F5A29C5205369AF006C1B8F /* PracticeProblemsViewController.swift */,
+				7731DECD2106347E0050D337 /* QuizSetupViewController.swift */,
+				A38B72FC2068248D00A08644 /* QuizViewController.swift */,
+				7731DECB210628D10050D337 /* QuizOverviewViewController.swift */,
+				A3F83118204B0F4900ED3579 /* UnitConverterViewController.swift */,
+				A3E06AE720A913D20028F505 /* ForceEquations.swift */,
+				A30C391820C846A400180E99 /* GravitationalForceEquation.swift */,
+				A3E0111C2094E5490014E5A3 /* KinematicsEquations.swift */,
+				A397FBD920B8AE0000B85714 /* KineticEnergyEquations.swift */,
+				A3E06AEB20A9141D0028F505 /* PhysicsVariable.swift */,
+				A304E0F82097F2CC00A1E907 /* Unknown.swift */,
+				A30C391520C81F3900180E99 /* Equation.swift */,
+				77CCA11121E3ACA1005BE99A /* LocalPracticeProblem.swift */,
+				A3CBCA1B20D164FE000EF437 /* HelperStuff.swift */,
+				77B7586D220A4C5000283417 /* applogo.jpg */,
+				7731DEE121065F3B0050D337 /* buttons */,
+				A3CBCA0A20CD6265000EF437 /* eq images */,
 				F76388EF2016221B00854BE6 /* Assets.xcassets */,
+				77E4FA2E21320A88007BBEEB /* faceimg.png */,
 				F76388F12016221B00854BE6 /* LaunchScreen.storyboard */,
 				F76388F42016221B00854BE6 /* Info.plist */,
 			);
@@ -188,7 +542,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Luke Deratzou";
 				TargetAttributes = {
 					F76388E42016221B00854BE6 = {
@@ -232,8 +586,74 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77E4FA242120F7DE007BBEEB /* button_forces.gif in Resources */,
+				77282B922120F678007351E8 /* button_convert_disabled.gif in Resources */,
+				77E4FA192120F7DE007BBEEB /* button_quiz.gif in Resources */,
+				77282B7C2120F678007351E8 /* button_c_disabled.gif in Resources */,
 				F76388F32016221B00854BE6 /* LaunchScreen.storyboard in Resources */,
+				7749CCE52156E20B0001C39D /* kineticenergyeq.gif in Resources */,
+				77282B892120F678007351E8 /* button_more.gif in Resources */,
+				77282B8C2120F678007351E8 /* button_b.gif in Resources */,
+				77E4FA202120F7DE007BBEEB /* cloud2.png in Resources */,
+				7749CCE02156DEB70001C39D /* kinematics4.gif in Resources */,
+				77282B7F2120F678007351E8 /* button_exit.gif in Resources */,
+				77E4FA272120F7DE007BBEEB /* button_unit-converter.gif in Resources */,
+				77E4FA2C2120F7DE007BBEEB /* button_show-equation.gif in Resources */,
+				77282B902120F678007351E8 /* button_begin-quiz.gif in Resources */,
+				77282B782120F678007351E8 /* button_hide-help.gif in Resources */,
+				77E4FA082120F7DE007BBEEB /* button_help.gif in Resources */,
+				77E4FA162120F7DE007BBEEB /* button_check.gif in Resources */,
+				7749CCE32156DEB70001C39D /* kinematics5.gif in Resources */,
 				F76388F02016221B00854BE6 /* Assets.xcassets in Resources */,
+				77E4FA022120F7DE007BBEEB /* qmark.png in Resources */,
+				77282B8B2120F678007351E8 /* button_b_disabled.gif in Resources */,
+				77E4FA122120F7DE007BBEEB /* cloud3.png in Resources */,
+				7749CCE12156DEB70001C39D /* kinematics2.gif in Resources */,
+				77B7586C2208B05800283417 /* button_save-problem-disabled.gif in Resources */,
+				77282B832120F678007351E8 /* button_convert.gif in Resources */,
+				77B7586E220A4C5000283417 /* applogo.jpg in Resources */,
+				7749CCE72156E2B50001C39D /* gravitationalforceeq.gif in Resources */,
+				7749CCD92156ACDB0001C39D /* force.gif in Resources */,
+				77B758682203F00200283417 /* button_help_1.gif in Resources */,
+				77E4FA252120F7DE007BBEEB /* button_hint.gif in Resources */,
+				77E4FA0F2120F7DE007BBEEB /* button_a.gif in Resources */,
+				77E4FA2D2120F7DE007BBEEB /* button_save.gif in Resources */,
+				77B7586A2204849000283417 /* button_exit-help.gif in Resources */,
+				77E4FA072120F7DE007BBEEB /* button_d_disabled.gif in Resources */,
+				77E4FA292120F7DE007BBEEB /* button.png in Resources */,
+				77E4F9FD2120F7DE007BBEEB /* button_gravitational-force.gif in Resources */,
+				77E4FA0A2120F7DE007BBEEB /* button_begin-quiz_disabled.gif in Resources */,
+				77282B8F2120F678007351E8 /* button_hide-past-conversions.gif in Resources */,
+				77E4F9FB2120F7DE007BBEEB /* cloud.png in Resources */,
+				77282B7A2120F678007351E8 /* button_calculate _disabled.gif in Resources */,
+				77E4FA1D2120F7DE007BBEEB /* button_d.gif in Resources */,
+				77282B822120F678007351E8 /* button_calculate.gif in Resources */,
+				77E4FA152120F7DE007BBEEB /* button_show-past-conversions.gif in Resources */,
+				77E4FA2F21320A88007BBEEB /* faceimg.png in Resources */,
+				77E4FA092120F7DE007BBEEB /* gear.png in Resources */,
+				77E4FA172120F7DE007BBEEB /* button_practice-problems.gif in Resources */,
+				77E4FA142120F7DE007BBEEB /* button_submit-answer.gif in Resources */,
+				77E4FA1C2120F7DE007BBEEB /* left_arrow.png in Resources */,
+				77E4F9FC2120F7DE007BBEEB /* button_other-calculators.gif in Resources */,
+				77E4FA102120F7DE007BBEEB /* button_kinematics.gif in Resources */,
+				77282B7E2120F678007351E8 /* button_calculate _highlighted.gif in Resources */,
+				7749CCE22156DEB70001C39D /* kinematics1.gif in Resources */,
+				77E4FA232120F7DE007BBEEB /* button_c.gif in Resources */,
+				77282B812120F678007351E8 /* button_another-calculation.gif in Resources */,
+				77E4FA182120F7DE007BBEEB /* button_hint_disabled.gif in Resources */,
+				77E4FA1B2120F7DE007BBEEB /* button_submit-answer_disabled.gif in Resources */,
+				77B75876220FBA5B00283417 /* kinematics3.gif in Resources */,
+				77282B852120F678007351E8 /* button_another-conversion.gif in Resources */,
+				77DDDBF921F6A536008D2E55 /* button_save-problem.gif in Resources */,
+				77E4F9FF2120F7DE007BBEEB /* button_show-work_disable.gif in Resources */,
+				77E4FA2B2120F7DE007BBEEB /* button_a_disabled.gif in Resources */,
+				77282B762120F678007351E8 /* button_check_disabled.gif in Resources */,
+				77E4FA132120F7DE007BBEEB /* button_kinetic-energy.gif in Resources */,
+				77E4FA222120F7DE007BBEEB /* button_show-work.gif in Resources */,
+				77E4FA1A2120F7DE007BBEEB /* button_restart-quiz.gif in Resources */,
+				77E4FA1F2120F7DE007BBEEB /* return_arrow.png in Resources */,
+				3F5A29CC20537402006C1B8F /* CalculatorPic.jpg in Resources */,
+				77E4FA2A2120F7DE007BBEEB /* right_arrow.png in Resources */,
 				F76388EE2016221B00854BE6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +679,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3CBCA0320CC364B000EF437 /* ShowWorkViewController.swift in Sources */,
+				A397FBDA20B8AE0000B85714 /* KineticEnergyEquations.swift in Sources */,
+				A304E0F92097F2CC00A1E907 /* Unknown.swift in Sources */,
 				F76388EB2016221B00854BE6 /* ViewController.swift in Sources */,
+				77DDDBFB21FB4A77008D2E55 /* DoneButton.swift in Sources */,
+				A38B72FD2068248D00A08644 /* QuizViewController.swift in Sources */,
+				3F5A29C6205369AF006C1B8F /* PracticeProblemsViewController.swift in Sources */,
+				A30C391420C59A4800180E99 /* CalculatorViewController.swift in Sources */,
+				A3E06AE820A913D20028F505 /* ForceEquations.swift in Sources */,
+				77B75872220B8E3400283417 /* SegueFromLeft.swift in Sources */,
+				A30C391920C846A400180E99 /* GravitationalForceEquation.swift in Sources */,
+				A3E06AEC20A9141D0028F505 /* PhysicsVariable.swift in Sources */,
+				7731DEFF210667570050D337 /* PaddingLabel.swift in Sources */,
 				F76388E92016221B00854BE6 /* AppDelegate.swift in Sources */,
+				7731DECE2106347E0050D337 /* QuizSetupViewController.swift in Sources */,
+				77CCA11221E3ACA1005BE99A /* LocalPracticeProblem.swift in Sources */,
+				77CCA11721F0F33A005BE99A /* MenuButton.swift in Sources */,
+				A3CBCA1C20D164FE000EF437 /* HelperStuff.swift in Sources */,
+				77B75874220B953200283417 /* SegueFromRight.swift in Sources */,
+				A3CBCA0E20CD713E000EF437 /* ShowEquationViewController.swift in Sources */,
+				A3A59842209E2DB200FC23B5 /* OptionsViewController.swift in Sources */,
+				7731DEDE21065CA30050D337 /* CustomButton.swift in Sources */,
+				7749CCD721500D6E0001C39D /* PaddingTextField.swift in Sources */,
+				A30C391620C81F3900180E99 /* Equation.swift in Sources */,
+				7731DECC210628D10050D337 /* QuizOverviewViewController.swift in Sources */,
+				A3E0111D2094E5490014E5A3 /* KinematicsEquations.swift in Sources */,
+				77CCA11021DED898005BE99A /* SettingsViewController.swift in Sources */,
+				A3F83119204B0F4900ED3579 /* UnitConverterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +775,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -336,6 +783,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -386,6 +834,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -393,6 +842,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -426,11 +876,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2K9U474T9H;
 				INFOPLIST_FILE = "Kintematics Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "luke.Kintematics-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = "luke.Portable-Physicist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -440,11 +894,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2K9U474T9H;
 				INFOPLIST_FILE = "Kintematics Calculator/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "luke.Kintematics-Calculator";
+				PRODUCT_BUNDLE_IDENTIFIER = "luke.Portable-Physicist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
